@@ -1,36 +1,220 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# HireFlow - Mini Recruitment Workflow System
 
-## Getting Started
+## Project Overview
 
-First, run the development server:
+HireFlow is a full-stack recruitment workflow system developed as a technical assignment.
+The application allows administrators to manage candidates throughout the hiring process. It provides authentication, candidate management, assignment tracking, recruitment workflow management, and a dashboard with recruitment statistics.
+This project was built using the MERN ecosystem (Next.js frontend with Express.js backend), PostgreSQL database, Prisma ORM, JWT authentication, and Tailwind CSS.
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+### Authentication
+- User Signup
+- User Login
+- JWT-based Authentication
+- Protected Routes
+
+### Candidate Management
+- Add New Candidate
+- View All Candidates
+- Update Candidate Information
+- Delete Candidate
+- Recruitment Status Management
+  - Applied
+  - Interviewing
+  - Selected
+  - Rejected
+- Candidate Notes
+
+### Assignment Tracking
+- Create Assignment
+- Assign Candidate
+- Assignment Status
+  - Pending
+  - Submitted
+  - Completed
+- Due Date Management
+
+### Dashboard
+- Total Candidates
+- Interviewing Candidates
+- Selected Candidates
+- Recent Applications
+
+### Responsive Design
+- Mobile Friendly
+- Tablet Friendly
+- Desktop Friendly
+
+---
+
+## Tech Stack
+
+### Frontend
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+
+### Backend
+- Node.js
+- Express.js
+- TypeScript
+
+### Database
+- PostgreSQL
+- Prisma ORM
+
+### Authentication
+- JWT (JSON Web Token)
+- bcrypt
+
+### Tools
+- Git
+- GitHub
+- Postman
+- VS Code
+---
+
+## Folder Structure
+
+```text
+hireflow/
+│
+├── backend/
+│   ├── controllers/
+│   ├── routes/
+│   ├── middleware/
+│   ├── prisma/
+│   ├── config/
+│   ├── index.ts
+│   └── package.json
+│
+├── src/
+│   └── app/
+│       ├── components/
+│       ├── login/
+│       ├── signup/
+│       ├── candidates/
+│       ├── add-candidate/
+│       ├── assignments/
+│       ├── add-assignment/
+│       └── page.tsx
+│
+├── README.md
+└── package.json
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Clone the repository
 
-## Learn More
+```bash
+git clone <repository-url>
+```
 
-To learn more about Next.js, take a look at the following resources:
+### Install Frontend Dependencies
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+pnpm install
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Install Backend Dependencies
 
-## Deploy on Vercel
+```bash
+cd backend
+pnpm install
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Environment Variables
+
+Create a `.env` file inside the `backend` folder and add the following variables:
+
+```env
+DATABASE_URL=your_database_url
+JWT_SECRET=your_secret_key
+PORT=5000
+```
+
+---
+
+## Run the Project
+
+### Start Backend
+
+```bash
+cd backend
+pnpm dev
+```
+
+### Start Frontend
+
+```bash
+pnpm dev
+```
+---
+
+## API Endpoints
+
+### Authentication
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| POST | /api/auth/signup | Register a new user |
+| POST | /api/auth/login | Login user |
+
+### Candidates
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | /api/candidates | Get all candidates |
+| GET | /api/candidates/:id | Get single candidate |
+| POST | /api/candidates | Create candidate |
+| PUT | /api/candidates/:id | Update candidate |
+| DELETE | /api/candidates/:id | Delete candidate |
+
+### Assignments
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | /api/assignments | Get all assignments |
+| GET | /api/assignments/:id | Get single assignment |
+| POST | /api/assignments | Create assignment |
+| PUT | /api/assignments/:id | Update assignment |
+| DELETE | /api/assignments/:id | Delete assignment |
+
+### Dashboard
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | /api/dashboard | Dashboard statistics |
+
+---
+
+## Future Improvements
+
+- Role-based authentication
+- Email notifications
+- Resume upload support
+- Search and advanced filtering
+- Pagination
+- Dark mode
+- Interview scheduling
+- Candidate profile image upload
+
+---
+
+## Author
+
+**Eman Sajjad**
+
+Full-Stack Developer (MERN Stack)
+
+---
+
+## License
+
+This project was developed as part of a technical assessment and is intended for educational and demonstration purposes.
