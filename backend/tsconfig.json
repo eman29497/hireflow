@@ -9,7 +9,7 @@
   },
   "include": [
     "**/*.ts",
-    "declaration.d.ts"
+    "index.d.ts"
   ],
   "exclude": [
     "node_modules"
