@@ -33,12 +33,15 @@ export const signup = async (req: Request, res: Response) => {
       message: "Signup successful",
       user,
     });
-  } catch {
-    res.status(500).json({
-      success: false,
-      message: "Server Error",
-    });
-  }
+  } catch (error) {
+  console.log(error);
+
+  res.status(500).json({
+    success: false,
+    message: "Server Error",
+    error,
+  });
+}
 };
 export const login = async (req: Request, res: Response) => {
   try {
@@ -79,10 +82,13 @@ export const login = async (req: Request, res: Response) => {
         email: user.email,
       },
     });
-  } catch {
-    res.status(500).json({
-      success: false,
-      message: "Server Error",
-    });
-  }
+  } catch (error) {
+  console.log(error);
+
+  res.status(500).json({
+    success: false,
+    message: "Server Error",
+    error,
+  });
+}
 };
