@@ -22,7 +22,7 @@ function LoginPage() {
     const handleLogin = async (e)=>{
         e.preventDefault();
         try {
-            const res = await fetch(`${("TURBOPACK compile-time value", "https://hireflow-backend-c717.onrender.com")}/api/auth/login`, {
+            const res = await fetch(`${("TURBOPACK compile-time value", "https://sparkling-liberation-production-2d39.up.railway.app")}/api/auth/login`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

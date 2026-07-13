@@ -37,7 +37,7 @@ function Dashboard() {
     }["Dashboard.useEffect"], []);
     const fetchDashboard = async (token)=>{
         try {
-            const res = await fetch(`${("TURBOPACK compile-time value", "https://hireflow-backend-c717.onrender.com")}/api/dashboard`, {
+            const res = await fetch(`${("TURBOPACK compile-time value", "https://sparkling-liberation-production-2d39.up.railway.app")}/api/dashboard`, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }

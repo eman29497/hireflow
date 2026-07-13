@@ -24,7 +24,7 @@ function SignupPage() {
     const handleSignup = async (e)=>{
         e.preventDefault();
         try {
-            const res = await fetch(`${("TURBOPACK compile-time value", "https://hireflow-backend-c717.onrender.com")}/api/signup`, {
+            const res = await fetch(`${("TURBOPACK compile-time value", "https://sparkling-liberation-production-2d39.up.railway.app")}/api/signup`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
