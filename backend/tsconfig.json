@@ -7,10 +7,10 @@
     "strict": true,
     "skipLibCheck": true
   },
-  "include": [
-    "**/*.ts",
-    "index.d.ts"
-  ],
+"include": [
+  "**/*.ts",
+  "**/*.d.ts"
+],
   "exclude": [
     "node_modules"
   ]
