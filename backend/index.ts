@@ -10,8 +10,9 @@ const app: Application = express();
 app.use(
   cors({
     origin: [
-      "https://hireflow-frontend-two.vercel.app",
+      "https://hireflow-frontend-two.vercel.app"
     ],
+    methods:['GET','POST','PUT','DELETE'],
     credentials: true,
   })
 );
