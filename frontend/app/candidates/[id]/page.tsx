@@ -12,16 +12,14 @@ export default function CandidateDetailsPage() {
     status: "Applied",
     notes: "",
   });
-
   useEffect(() => {
     fetchCandidate();
   }, []);
-
   const fetchCandidate = async () => {
     try {
       const token = localStorage.getItem("token");
       const res = await fetch(
-        `http://localhost:5000/api/candidates/${id}`,
+        `${process.env.NEXT_PUBLIC_API_URL}/api/candidates/${id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -62,7 +60,7 @@ export default function CandidateDetailsPage() {
     e.preventDefault();
     const token = localStorage.getItem("token");
     const res = await fetch(
-      `http://localhost:5000/api/candidates/${id}`,
+      `${process.env.NEXT_PUBLIC_API_UTL}/api/candidates/${id}`,
       {
         method: "PUT",
         headers: {
@@ -87,7 +85,7 @@ export default function CandidateDetailsPage() {
     if (!confirmDelete) return;
     const token = localStorage.getItem("token");
     const res = await fetch(
-      `http://localhost:5000/api/candidates/${id}`,
+      `${process.env.NEXT_PUBLIC_API_URL}/api/candidates/${id}`,
       {
         method: "DELETE",
         headers: {
@@ -95,7 +93,6 @@ export default function CandidateDetailsPage() {
         },
       }
     );
-
     const data = await res.json();
     if (res.ok) {
       alert("Candidate Deleted Successfully");

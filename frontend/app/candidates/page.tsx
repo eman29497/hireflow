@@ -17,7 +17,8 @@ export default function CandidatesPage() {
   const fetchCandidates = async () => {
     try {
       const token = localStorage.getItem("token");
-      const res = await fetch("http://localhost:5000/api/candidates", {
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/api/candidates`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

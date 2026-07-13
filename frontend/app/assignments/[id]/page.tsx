@@ -1,20 +1,15 @@
 "use client";
-
 import { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
-
 interface Candidate {
   id: number;
   name: string;
 }
-
 export default function AssignmentDetailsPage() {
   const { id } = useParams();
   const router = useRouter();
-
   const [candidates, setCandidates] = useState<Candidate[]>([]);
   const [loading, setLoading] = useState(true);
-
   const [formData, setFormData] = useState({
     title: "",
     description: "",
@@ -22,27 +17,22 @@ export default function AssignmentDetailsPage() {
     dueDate: "",
     candidateId: 0,
   });
-
   useEffect(() => {
     fetchCandidates();
     fetchAssignment();
   }, []);
-
   const fetchCandidates = async () => {
     try {
       const token = localStorage.getItem("token");
-
       const res = await fetch(
-        "http://localhost:5000/api/candidates",
+        `${process.env.NEXT_PUBLIC_API_URL}/api/candidates`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
           },
         }
       );
-
       const data = await res.json();
-
       if (res.ok) {
         setCandidates(data.candidates);
       }
@@ -50,13 +40,11 @@ export default function AssignmentDetailsPage() {
       console.log(error);
     }
   };
-
   const fetchAssignment = async () => {
     try {
       const token = localStorage.getItem("token");
-
       const res = await fetch(
-        `http://localhost:5000/api/assignments/${id}`,
+        `${process.env.NEXT_PUBLIC_API_UTL}/api/assignments/${id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -77,14 +65,12 @@ export default function AssignmentDetailsPage() {
           candidateId: data.assignment.candidateId,
         });
       }
-
       setLoading(false);
     } catch (error) {
       console.log(error);
       setLoading(false);
     }
   };
-
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement |
@@ -100,16 +86,13 @@ export default function AssignmentDetailsPage() {
           : e.target.value,
     });
   };
-
   const handleUpdate = async (
     e: React.FormEvent
   ) => {
     e.preventDefault();
-
     const token = localStorage.getItem("token");
-
     const res = await fetch(
-      `http://localhost:5000/api/assignments/${id}`,
+      `${process.env.NEXT_PUBLIC_API_URL}/api/assignments/${id}`,
       {
         method: "PUT",
         headers: {
@@ -144,7 +127,7 @@ export default function AssignmentDetailsPage() {
     const token = localStorage.getItem("token");
 
     const res = await fetch(
-      `http://localhost:5000/api/assignments/${id}`,
+      `${process.env.NEXT_PUBLIC_API_URL}/api/assignments/${id}`,
       {
         method: "DELETE",
         headers: {

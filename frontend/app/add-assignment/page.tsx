@@ -22,7 +22,7 @@ export default function AddAssignmentPage() {
   const fetchCandidates = async () => {
     try {
       const token = localStorage.getItem("token");
-      const res = await fetch("http://localhost:5000/api/candidates", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/candidates`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -53,7 +53,7 @@ export default function AddAssignmentPage() {
     e.preventDefault();
     const token = localStorage.getItem("token");
     const res = await fetch(
-      "http://localhost:5000/api/assignments",
+      `${process.env.NEXT_PUBLIC_API_URL}/api/assignments`,
       {
         method: "POST",
         headers: {

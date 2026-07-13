@@ -21,7 +21,8 @@ export default function AddCandidatePage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const token = localStorage.getItem("token");
-    const res = await fetch("http://localhost:5000/api/candidates", {
+    const res = await fetch (`${process.env.NEXT_PUBLIC_API_URL}/api/candidates`,  {
+      
       method: "POST",
       headers: {
         "Content-Type": "application/json",

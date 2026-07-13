@@ -20,7 +20,8 @@ export default function AssignmentsPage() {
     try {
       const token = localStorage.getItem("token");
 
-      const res = await fetch("http://localhost:5000/api/assignments", {
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/api/assignments`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -46,15 +47,12 @@ export default function AssignmentsPage() {
       </h2>
     );
   }
-
   return (
     <div className="p-6 max-w-7xl mx-auto">
-
       <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-6">
       <h1 className="text-2xl sm:text-3xl font-bold text-slate-900">
           Assignment Tracking
         </h1>
-
       <Link
   href="/add-assignment"
   className="w-full sm:w-auto text-center bg-slate-900 text-white px-4 py-2 rounded-lg hover:bg-slate-800 transition"

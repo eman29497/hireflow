@@ -25,7 +25,6 @@ export default function Dashboard() {
   });
   useEffect(() => {
     const token = localStorage.getItem("token");
-
     if (!token) {
       router.replace("/signup");
       return;
@@ -34,7 +33,8 @@ export default function Dashboard() {
   }, []);
   const fetchDashboard = async (token: string) => {
     try {
-      const res = await fetch("http://localhost:5000/api/dashboard", {
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_API_URL}/api/dashboard`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

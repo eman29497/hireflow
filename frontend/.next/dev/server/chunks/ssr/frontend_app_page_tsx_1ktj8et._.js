@@ -32,7 +32,7 @@ function Dashboard() {
     }, []);
     const fetchDashboard = async (token)=>{
         try {
-            const res = await fetch("http://localhost:5000/api/dashboard", {
+            const res = await fetch(`${("TURBOPACK compile-time value", "https://hireflow-backend-c717.onrender.com")}/api/dashboard`, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
