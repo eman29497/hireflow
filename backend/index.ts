@@ -7,10 +7,14 @@ import assignmentRoutes from "./routes/assignmentRoutes";
 import dashboardRoutes from "./routes/dashboardRoutes";
 dotenv.config();
 const app: Application = express();
-app.use(cors({
-  origin:'*',
-  credentials:true
-}));
+app.use(
+  cors({
+    origin: [
+      "https://hireflow-frontend-two.vercel.app",
+    ],
+    credentials: true,
+  })
+);
 app.use(express.json());
 app.get("/", (req: Request, res: Response) => {
   res.status(200).json({
