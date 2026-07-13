@@ -35,7 +35,6 @@ export const signup = async (req: Request, res: Response) => {
     });
   } catch (error) {
   console.log(error);
-
   res.status(500).json({
     success: false,
     message: "Server Error",
@@ -84,7 +83,6 @@ export const login = async (req: Request, res: Response) => {
     });
   } catch (error) {
   console.log(error);
-
   res.status(500).json({
     success: false,
     message: "Server Error",
