@@ -1,50 +1,13 @@
 globalThis.__BUILD_MANIFEST = {
   "pages": {
-    "/_app": [
-      "static/chunks/1oj-_next_dist_compiled_12_kk-p._.js",
-      "static/chunks/1oj-_next_dist_shared_lib_0hyqia8._.js",
-      "static/chunks/1oj-_next_dist_client_1l7er_e._.js",
-      "static/chunks/1oj-_next_dist_18548vq._.js",
-      "static/chunks/1oj-_next_app_0_taehc.js",
-      "static/chunks/[next]_entry_page-loader_ts_1u0f_1w._.js",
-      "static/chunks/162a_react-dom_1hsf_h5._.js",
-      "static/chunks/node_modules__pnpm_20tl2_t._.js",
-      "static/chunks/[root-of-the-server]__0w7izlh._.js",
-      "static/chunks/frontend_pages__app_0du2_q-._.js",
-      "static/chunks/turbopack-frontend_pages__app_1adh7ks._.js"
-    ],
-    "/_error": [
-      "static/chunks/1oj-_next_dist_compiled_12_kk-p._.js",
-      "static/chunks/1oj-_next_dist_shared_lib_1zocflv._.js",
-      "static/chunks/1oj-_next_dist_client_1l7er_e._.js",
-      "static/chunks/1oj-_next_dist_0naaaq5._.js",
-      "static/chunks/[next]_entry_page-loader_ts_0a2qqgs._.js",
-      "static/chunks/162a_react-dom_1hsf_h5._.js",
-      "static/chunks/node_modules__pnpm_20tl2_t._.js",
-      "static/chunks/[root-of-the-server]__0d5alyq._.js",
-      "static/chunks/frontend_pages__error_0du2_q-._.js",
-      "static/chunks/turbopack-frontend_pages__error_0_vxz12._.js"
-    ]
+    "/_app": []
   },
   "devFiles": [],
-  "polyfillFiles": [
-    "static/chunks/1oj-_next_dist_build_polyfills_polyfill-nomodule.js"
-  ],
+  "polyfillFiles": [],
   "lowPriorityFiles": [
     "static/development/_buildManifest.js",
     "static/development/_ssgManifest.js",
     "static/development/_clientMiddlewareManifest.js"
   ],
-  "rootMainFiles": [
-    "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_0tu1pa_._.js",
-    "static/chunks/1oj-_next_dist_compiled_next-devtools_index_1cppl3l.js",
-    "static/chunks/1oj-_next_dist_compiled_react-dom_11zt8p4._.js",
-    "static/chunks/1oj-_next_dist_compiled_react-server-dom-turbopack_0fd-83a._.js",
-    "static/chunks/1oj-_next_dist_compiled_09ip5p8._.js",
-    "static/chunks/1oj-_next_dist_client_0jzfynt._.js",
-    "static/chunks/1oj-_next_dist_0rp176u._.js",
-    "static/chunks/0vvp_@swc_helpers_cjs_0vb02wp._.js",
-    "static/chunks/frontend_1anvha4._.js",
-    "static/chunks/turbopack-frontend_1cotetw._.js"
-  ]
+  "rootMainFiles": []
 };

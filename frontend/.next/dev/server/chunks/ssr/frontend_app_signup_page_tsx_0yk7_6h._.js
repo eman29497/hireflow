@@ -21,7 +21,7 @@ function SignupPage() {
     const handleSignup = async (e)=>{
         e.preventDefault();
         try {
-            const res = await fetch(`${("TURBOPACK compile-time value", "https://sparkling-liberation-production-2d39.up.railway.app")}/api/signup`, {
+            const res = await fetch(`${("TURBOPACK compile-time value", "https://sparkling-liberation-production-2d39.up.railway.app")}/api/auth/signup`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
