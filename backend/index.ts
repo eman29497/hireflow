@@ -27,7 +27,7 @@ app.use("/api/auth", authRoutes);
  app.use("/api/candidates", candidateRoutes);
 app.use("/api/assignments", assignmentRoutes);
 app.use("/api/dashboard", dashboardRoutes);
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
+const PORT = process.env.PORT || 10000;
+app.listen(Number(PORT), '0.0.0.0', () => {
   console.log(`Server is running on PORT ${PORT}`);
 });
